@@ -9,9 +9,6 @@ sys.path.append(curpath)
 app_root_path = os.path.abspath(curpath)
 sys.path.append(app_root_path)
 
-app_api_path = os.path.abspath( os.path.join(curpath, "../api"))
-sys.path.append( app_api_path )
-
 bottle.BaseTemplate.defaults['URL_PREFIX'] = ''
 
 application = bottle.default_app()

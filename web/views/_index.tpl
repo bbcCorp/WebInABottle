@@ -1,6 +1,8 @@
 
 <div>
-    <h3> {{page_header}} </h3>
+    <br/>
+    <h4 class="text-muted"> {{page_header}} </h4>
+    <br/>
     <p>
         Here's a list of functionalities that this app provides
         <ul class="list-group">

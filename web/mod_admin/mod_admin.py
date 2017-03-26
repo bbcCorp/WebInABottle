@@ -36,6 +36,7 @@ def index():
 
     ## TODO: Create Admin views 
     t = template('admin.tmpl', dict(
+        active_page="admin",
         page_title = "Web in a Bottle", 
         page_header = 'Administration',
         current_user=authmgr.current_user,

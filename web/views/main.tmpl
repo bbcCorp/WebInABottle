@@ -15,22 +15,10 @@
 <body>
 
     <div class="container">
-        <div class="header">
-            <ul class="nav nav-pills pull-right">
-                <li class="active"><a href="{{URL_PREFIX}}/">Home</a></li>
-                <li><a href="{{URL_PREFIX}}/admin/">Admin</a></li>
-                <li><a href="{{URL_PREFIX}}/logout">Logout</a></li>
-
-            </ul>
-            <h2 class="appTitle">Application Name</h2>
-        </div>
-
-        %include('_index.tpl')
-        
+        %include('_header.tpl')
+        %include('_index.tpl')        
     </div>
 
-    <script src="{{URL_PREFIX}}/static/dist/js/jquery.min.js"></script>
-    <script src="{{URL_PREFIX}}/static/dist/js/bootstrap.min.js"></script>
-
+    %include('_js.tpl')
 </body>
 </html>

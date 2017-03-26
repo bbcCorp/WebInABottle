@@ -1,3 +1,5 @@
+%active_page="admin"
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +11,10 @@
 
     <title>{{page_title}}</title>
     <link href="{{URL_PREFIX}}/static/dist/css/bootstrap-yeti.min.css" rel="stylesheet" media="screen">
+    <link href="{{URL_PREFIX}}/static/dist/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
     <link href="{{URL_PREFIX}}/static/css/app.css" rel="stylesheet" media="screen">
+    
 
 </head>
 <body>
@@ -17,8 +22,7 @@
     <div class="container">
         %include('_header.tpl')
         <p>
-            %include('_users.tpl')
-            %include('_roles.tpl')
+            %include('_registeruser.tpl')
         </p>
     </div>
 

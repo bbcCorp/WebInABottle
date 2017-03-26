@@ -2,8 +2,9 @@
     <br/>
     <h4 class="text-muted"> Registered Users </h4>
     <br/>
+    <div class="pull-right"> <a href="/register">Register New User</a></div>
     <p>
-        <table class="table">
+        <table class="table table-hover">
             <thead class="thead-inverse">
                 <tr>
                     <th>UserID</th>

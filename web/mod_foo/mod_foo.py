@@ -29,11 +29,12 @@ def index():
 
     fm = FooManager()
     data = fm.getInfo()
-    t = template('app_main.tmpl', { 
-        'page_title': "Web in a Bottle", 
-        'page_header': 'List of Application Functionalities',
-        'contentLst' :  data
-    })
+    t = template('main.tmpl', dict(
+        active_page="home",
+        page_title="Web in a Bottle",
+        page_header='List of Application Functionalities',
+        contentLst = data
+    ))
     return t
 #######################################################################  
 

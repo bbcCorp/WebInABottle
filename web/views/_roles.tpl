@@ -3,7 +3,7 @@
     <h4 class="text-muted"> Application Roles </h4>
     <br/>
     <p>
-        <table class="table">
+        <table class="table table-hover">
             <thead class="thead-inverse">
                 <tr>
                     <th>RoleID</th>

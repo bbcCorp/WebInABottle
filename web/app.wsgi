@@ -58,10 +58,21 @@ def user_is_anonymous():
 def logout():
     authmgr.logout(success_redirect='/login')
 
+@bottle.get('/register')
+def user_register():
+    """Serve user registration form"""
+    t = template('user_registration.tmpl', {'page_title': 'User Registration' })
+    return t
+
 @bottle.post('/register')
 def register():
     """Send out registration email"""
-    authmgr.register(post_get('username'), post_get('password'), post_get('email_address'))
+    authmgr.register(
+        post_get('username'), 
+        post_get('password'), 
+        post_get('email_address'),
+        email_template="registration_email.tpl"
+    )
     return 'Please check your mailbox.'
 
 

@@ -17,14 +17,16 @@
     <div class="container">
         <div class="header">
             <ul class="nav nav-pills pull-right">
-                <li class="active"><a href="{{URL_PREFIX}}/">Home</a></li>
-
+                <li><a href="{{URL_PREFIX}}/foo/index">Home</a></li>
+                <li class="active"><a href="{{URL_PREFIX}}/admin/">Admin</a></li>
+                <li><a href="{{URL_PREFIX}}/logout">Logout</a></li>
             </ul>
             <h2 class="appTitle">Application Name</h2>
         </div>
-
-        %include('_index.tpl')
-        
+        <p>
+            %include('_users.tpl')
+            %include('_roles.tpl')
+        </p>
     </div>
 
     <script src="{{URL_PREFIX}}/static/dist/js/jquery.min.js"></script>

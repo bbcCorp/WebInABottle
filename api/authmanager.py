@@ -10,7 +10,7 @@ class AuthFactory(object):
     
     def __init__(self):
         pass
-
+        
     def initiate_authmgr(self):
         ''' Internal function to intiate authentication manager '''
         self.authBackend = MongoDBBackend (

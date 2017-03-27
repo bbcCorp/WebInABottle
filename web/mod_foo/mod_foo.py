@@ -9,6 +9,8 @@ curpath = os.path.dirname(os.path.abspath(__file__))
 app_views_path = os.path.abspath( os.path.join(curpath,"../views/"))
 bottle.TEMPLATE_PATH.insert(0, app_views_path )
 
+foo_views_path = os.path.abspath( os.path.join(curpath,"../views/foo/"))
+bottle.TEMPLATE_PATH.insert(0, foo_views_path )
 
 app_api_path = os.path.abspath( os.path.join(curpath, "../../api"))
 sys.path.append( app_api_path )
@@ -29,13 +31,6 @@ def index():
 
     fm = FooManager()
     data = fm.getInfo()
-    # t = template('main.tmpl', dict(
-    #     active_page="home",
-    #     page_title="Web in a Bottle",
-    #     page_header='List of Application Functionalities',
-    #     contentLst = data
-    # ))
-
     t = template('baseTemplate.tmpl', dict(
         pagelets=['_index.tpl'],
         active_page="home",

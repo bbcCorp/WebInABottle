@@ -63,7 +63,7 @@ def user_register():
     """Serve user registration form"""
     t = template('baseTemplate.tmpl', dict(
         pagelets=['_registeruser.tpl'],
-        active_page='admin',    
+        active_page='register',
         page_title= 'User Registration',
     ))
     return t

@@ -25,3 +25,9 @@ $ python web/app.wsgi
 This starts standalone WSGI server that is listening to port 1337
 
 Point your browser to localhost:1337
+
+------------------------------------------------------
+## Docker Setup
+
+A sample Dockerfile has been provided to run this sample application inside a Docker container. 
+ 

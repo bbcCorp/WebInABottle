@@ -35,7 +35,8 @@ def index():
     authmgr.require(role='admin', fail_redirect='/sorry_page')
 
     ## TODO: Create Admin views 
-    t = template('admin.tmpl', dict(
+    t = template('baseTemplate.tmpl', dict(
+        pagelets = ['_users.tpl','_roles.tpl'],
         active_page="admin",
         page_title = "Web in a Bottle", 
         page_header = 'Administration',

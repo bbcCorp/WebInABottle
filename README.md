@@ -7,7 +7,8 @@ It uses the following framework/packages/library
 + MongoDB 
 + <a href="http://bottlepy.org/docs/dev/index.html" title="Python Bottle">Bottle web framework</a> and the <a href="http://bottlepy.org/docs/dev/stpl.html" title="SimpleTemplate Engine">SimpleTemplate Engine</a> 
 + Bootstrap and the <a href="https://bootswatch.com/yeti/" title="Bootswatch Yeti">Bootswatch Yeti</a>
-
++ jQuery 
++ FontAwesome
 + <a href="https://github.com/FedericoCeratto/bottle-cork" title="Bottle-Cork">Bottle-Cork</a> for authentication and authorization
 ------------------------------------------------------
 ## Application Setup

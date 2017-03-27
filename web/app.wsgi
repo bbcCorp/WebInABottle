@@ -61,7 +61,11 @@ def logout():
 @bottle.get('/register')
 def user_register():
     """Serve user registration form"""
-    t = template('user_registration.tmpl', {'page_title': 'User Registration' })
+    t = template('baseTemplate.tmpl', dict(
+        pagelets=['_registeruser.tpl'],
+        active_page='admin',    
+        page_title= 'User Registration',
+    ))
     return t
 
 @bottle.post('/register')
@@ -128,7 +132,12 @@ def show_current_user_role():
 # @bottle.view('login')
 def login_form():
     """Serve login form"""
-    t = template('login.tmpl', {'page_title': 'Login' })
+    #t = template('login.tmpl', {'page_title': 'Login' })
+    t = template('baseTemplate.tmpl', dict(
+        pagelets=['_login.tpl'],
+        active_page='login',    
+        page_title= 'Login',
+    ))
     return t
 
 

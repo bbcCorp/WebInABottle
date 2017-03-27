@@ -9,14 +9,21 @@
 
     <title>{{page_title}}</title>
     <link href="{{URL_PREFIX}}/static/dist/css/bootstrap-yeti.min.css" rel="stylesheet" media="screen">
+    <link href="{{URL_PREFIX}}/static/dist/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
     <link href="{{URL_PREFIX}}/static/css/app.css" rel="stylesheet" media="screen">
+    
 
 </head>
 <body>
 
     <div class="container">
         %include('_header.tpl')
-        %include('_index.tpl')        
+        <p>
+            % for tpl in pagelets:
+            %include(tpl)
+            % end
+        </p>
     </div>
 
     %include('_js.tpl')

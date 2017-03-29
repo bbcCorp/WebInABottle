@@ -1,8 +1,10 @@
+import os
+
 mongo_conf = {
-    'host' : 'localhost',
-    'port' : 27017,
+    'host' : os.environ['MONGO_SERVER'] if 'MONGO_SERVER' in os.environ else 'localhost',
+    'port' : int(os.environ['MONGO_PORT']) if 'MONGO_PORT' in os.environ else 27017,
     'db' : 'webinabottle',
-    'username': None, 
+    'username': None,
     'password': None
 }
 

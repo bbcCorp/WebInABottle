@@ -1,0 +1,37 @@
+version: '2'
+
+services:
+
+  mongo:
+    image: mongo
+    volumes:
+      - ./../data/db:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - webinabottle-network
+    #command: --smallfiles --rest --auth   
+
+  webinabottle-wfe1:
+    image: bbcstar/webinabottle-wfe
+    ports: 
+      - "5001:80"
+    tty: true
+    networks:
+      - webinabottle-network
+    volumes:
+      - ./logs/wfe1:/var/log/
+
+  webinabottle-wfe2:
+    image: bbcstar/webinabottle-wfe
+    ports: 
+      - "5002:80"
+    tty: true
+    networks:
+      - webinabottle-network
+    volumes:
+      - ./logs/wfe2:/var/log/
+
+networks:
+  webinabottle-network:
+    driver: bridge

@@ -1,3 +1,10 @@
+import os
+import sys
+
+curpath = os.path.dirname(__file__)
+sys.path.append(os.path.abspath(os.path.join(curpath, '..')))
+
+
 # class: FooManager
 class FooManager(object):
 
